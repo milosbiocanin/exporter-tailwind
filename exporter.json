@@ -6,7 +6,7 @@
   "organization": "Ascanio",
   "homepage": "https://ascan.io",
   "source_dir": "src",
-  "version": "1.7.1",
+  "version": "1.8",
   "usesBrands": true,
   "config": {
     "sources": "sources.json",
