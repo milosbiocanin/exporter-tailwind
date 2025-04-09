@@ -5,11 +5,28 @@ Tokens are named by their group path and then name,
 and their value rendered using `rendered-color` blueprint
 
 *}
-:root {
+@theme static {
+  --color-*: initial;
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-black: oklch(0% 0 0);
+  --color-white: oklch(100% 0 0);
+  --color-muted: oklch(91.63% 0.010 273.35);
+  --color-textMuted: oklch(47.11% 0.047 270.70);
+  --color-body: oklch(36.39% 0.035 273.63);
+  --color-bodyLight: oklch(46.37% 0.040 272.09);
+  --color-activeBlue: oklch(57.30% 0.235 260.11);
+  --color-activeGray: oklch(98.12% 0.003 247.86);
+  --color-purple: oklch(59.71% 0.255 298.10);
+
 {[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Color", brand.id) ]}
-    {[ inject "rendered-token-var" context token /]}
+{[ let tokenGroup = ds.tokenGroupContainingTokenId(token.id) /]}
+{[ let tokenName = readableVariableName(token, tokenGroup, '') /]}
+{[ if (tokenName.startsWith('blue') || tokenName.startsWith('grey') || tokenName.startsWith('green') || tokenName.startsWith('red') || tokenName.startsWith('base') || tokenName.startsWith('webstack')) ]}
+  {[ inject "rendered-token-var" context token /]}
 
 
+{[/]}
 {[/]}
 }

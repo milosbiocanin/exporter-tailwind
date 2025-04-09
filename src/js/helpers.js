@@ -179,3 +179,10 @@ function getFormattedRGB(colorValue) {
     return `rgba(${colorValue.r},${colorValue.g},${colorValue.b},${opacity})`;
   }
 }
+
+function rgbToOklchString(colorValue) {
+  const a = Math.round((colorValue.a / 255) * 100) / 100;
+  return `oklch(from #${colorValue.hex.slice(0, 6)} l c h${a !== 1 ? ' / ' + a : ''})`
+}
+
+Pulsar.registerFunction("rgbToOklchString", rgbToOklchString);

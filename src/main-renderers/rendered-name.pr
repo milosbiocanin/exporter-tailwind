@@ -29,11 +29,8 @@ Rendered as:
 {[ switch context.tokenType ]}
 {[ case "Color" ]}{[ prefix = behavior.colorTokenPrefix /]}
 {[ case "Typography" ]}{[ prefix = behavior.typographyTokenPrefix /]}  
-{[ case "Shadow" ]}{[ prefix = behavior.shadowTokenPrefix /]}  
-{[ case "Border" ]}{[ prefix = behavior.borderTokenPrefix /]}  
-{[ case "Measure" ]}{[ prefix = behavior.measureTokenPrefix /]}  
-{[ case "Gradient" ]}{[ prefix = behavior.gradientTokenPrefix /]}  
+{[ case "Shadow" ]}{[ prefix = "" /]}  
 {[ default ]}{[ prefix = "" /]}  
 {[/]}
 {[ let tokenName = readableVariableName(context, tokenGroup, prefix) /]}
-{{ tokenName }}
+{{ tokenName === 'shadow' ? 'shadow-default' : tokenName }}
