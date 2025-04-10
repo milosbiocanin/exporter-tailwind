@@ -11,7 +11,7 @@ and their value rendered using `rendered-color` blueprint
 {[ let newtoken = addTokenType(token) /]}
 {[ let tokenGroup = ds.tokenGroupContainingTokenId(token.id) /]}
 {[ let tokenName = readableVariableName(token, tokenGroup, '') /]}
-{[ if (!tokenName.startsWith('black') && !tokenName.startsWith('white') && !tokenName.startsWith('blue') && !tokenName.startsWith('grey') && !tokenName.startsWith('green') && !tokenName.startsWith('red') && !tokenName.startsWith('base') && !tokenName.startsWith('webstack')) ]}
+{[ if (!tokenName.startsWith('black') && !tokenName.startsWith('white') && !tokenName.startsWith('blue') && !tokenName.startsWith('gray') && !tokenName.startsWith('green') && !tokenName.startsWith('red') && !tokenName.startsWith('base') && !tokenName.startsWith('neutral') && !tokenName.startsWith('webstack')) ]}
   {[ inject "rendered-token-var" context newtoken /]}
 
 

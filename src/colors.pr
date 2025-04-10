@@ -23,7 +23,7 @@ and their value rendered using `rendered-color` blueprint
 {[ for token in ds.tokensByType("Color", brand.id) ]}
 {[ let tokenGroup = ds.tokenGroupContainingTokenId(token.id) /]}
 {[ let tokenName = readableVariableName(token, tokenGroup, '') /]}
-{[ if (tokenName.startsWith('blue') || tokenName.startsWith('grey') || tokenName.startsWith('green') || tokenName.startsWith('red') || tokenName.startsWith('base') || tokenName.startsWith('webstack')) ]}
+{[ if (tokenName.startsWith('blue') || tokenName.startsWith('gray') || tokenName.startsWith('green') || tokenName.startsWith('red') || tokenName.startsWith('base') || tokenName.startsWith('neutral') || tokenName.startsWith('webstack')) ]}
   {[ inject "rendered-token-var" context token /]}
 
 

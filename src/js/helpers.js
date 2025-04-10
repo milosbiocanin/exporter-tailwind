@@ -22,6 +22,8 @@ Pulsar.registerFunction(
     }
     return tokenName
       .replace('scales-', '')
+      .replace('grey', 'gray')
+      .replace('base-neutral', 'neutral')
       .replace('border-bordercolor', 'bcolor')
       .replace('foreground-fgcolor', 'fgcolor')
       .replace('background-bgcolor', 'bgcolor');
