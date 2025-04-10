@@ -16,7 +16,15 @@ Pulsar.registerFunction(
     }
 
     // Create "sentence" separated by spaces so we can camelcase it all
-    return cleanSentence(segments.join(" "), true);
+    const tokenName = cleanSentence(segments.join(" "), true);
+    if (tokenName === 'border') {
+      return 'border-default';
+    }
+    return tokenName
+      .replace('scales-', '')
+      .replace('border-bordercolor', 'bcolor')
+      .replace('foreground-fgcolor', 'fgcolor')
+      .replace('background-bgcolor', 'bgcolor');
   }
 );
 
@@ -186,3 +194,9 @@ function rgbToOklchString(colorValue) {
 }
 
 Pulsar.registerFunction("rgbToOklchString", rgbToOklchString);
+
+function addTokenType(token) {
+  return {...token, token: true};
+}
+
+Pulsar.registerFunction("addTokenType", addTokenType);

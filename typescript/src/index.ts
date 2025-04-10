@@ -141,3 +141,9 @@ function rgbToOklchString(colorValue) {
 }
 
 Pulsar.registerFunction("rgbToOklchString", rgbToOklchString);
+
+function addTokenType(token) {
+  return {...token, token: true};
+}
+
+Pulsar.registerFunction("addTokenType", addTokenType);
