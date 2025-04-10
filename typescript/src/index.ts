@@ -32,15 +32,15 @@
     }
 
     if (sentence === 'border') {
-      return 'border-default';
+      return 'borderColor-default';
     }
     return sentence
       .replace('scales-', '')
       .replace('grey', 'gray')
       .replace('base-neutral', 'neutral')
-      .replace('border-bordercolor', 'bcolor')
-      .replace('foreground-fgcolor', 'fgcolor')
-      .replace('background-bgcolor', 'bgcolor');
+      .replace('border-bordercolor', 'borderColor')
+      .replace('foreground-fgcolor', 'fgColor')
+      .replace('background-bgcolor', 'bgColor');
 
   }
 );

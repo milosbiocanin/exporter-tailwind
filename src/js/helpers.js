@@ -18,15 +18,16 @@ Pulsar.registerFunction(
     // Create "sentence" separated by spaces so we can camelcase it all
     const tokenName = cleanSentence(segments.join(" "), true);
     if (tokenName === 'border') {
-      return 'border-default';
+      return 'borderColor-default';
     }
     return tokenName
       .replace('scales-', '')
       .replace('grey', 'gray')
       .replace('base-neutral', 'neutral')
-      .replace('border-bordercolor', 'bcolor')
-      .replace('foreground-fgcolor', 'fgcolor')
-      .replace('background-bgcolor', 'bgcolor');
+      .replace('border-bordercolor', 'borderColor')
+      .replace('foreground-fgcolor', 'fgColor')
+      .replace('fgcolor', 'fgColor')
+      .replace('background-bgcolor', 'bgColor');
   }
 );
 
