@@ -26,6 +26,9 @@ Rendered as:
 #rrggbbaa if it is semi-transparent color
 
 *}
-{[ inject "reference-wrapper" context context ]}
-{{ rgbToOklchString(context) }}
+{[ inject "reference-wrapper" context context.value ]}
+{[ if (context.value.referencedToken)]}
+var(--{[ inject "rendered-name" context context.value.referencedToken /]}){[ else ]}
+{{ rgbToOklchString(context.value) }}
+{[/]}
 {[/]}

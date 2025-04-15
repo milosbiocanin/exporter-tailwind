@@ -47,4 +47,19 @@ and their value rendered using `rendered-color` blueprint
   /* Background Colors */
   --color-background-neutral-100: theme(colors.black);
   --color-background-neutral-200: theme(colors.gray.950);
+{[ let themes = ds.allThemes(brand.id) /]}
+{[ let darkThemeId = getDarkThemeId(themes) /]}
+{[ if darkThemeId ]}
+{[ for token in ds.tokensByType("Color", brand.id) ]}
+{[ let darkToken = ds.tokensByApplyingThemes([token.id], [darkThemeId]) /]}
+{[ let newtoken = addTokenType(darkToken[0]) /]}
+{[ let tokenGroup = ds.tokenGroupContainingTokenId(token.id) /]}
+{[ let tokenName = readableVariableName(token, tokenGroup, '') /]}
+{[ if (!tokenName.startsWith('black') && !tokenName.startsWith('white') && !tokenName.startsWith('blue') && !tokenName.startsWith('gray') && !tokenName.startsWith('green') && !tokenName.startsWith('red') && !tokenName.startsWith('base') && !tokenName.startsWith('neutral') && !tokenName.startsWith('webstack')) ]}
+  {[ inject "rendered-token-var" context newtoken /]}
+
+
+{[/]}
+{[/]}
+{[/]}
 }

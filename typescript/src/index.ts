@@ -157,3 +157,9 @@ function addTokenType(token) {
 }
 
 Pulsar.registerFunction("addTokenType", addTokenType);
+
+function getDarkThemeId(themes) {
+  return themes.find(theme => theme.name.toLowerCase() === 'dark mode').id;
+}
+
+Pulsar.registerFunction("getDarkThemeId", getDarkThemeId);
