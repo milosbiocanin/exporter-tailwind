@@ -1,11 +1,4 @@
-{*
-
-Generate all shadow tokens as named variables.
-Tokens are named by their group path and then name, 
-and their value rendered using `shadow-color` blueprint
-
-*}
-:root {
+@theme {
   --shadow-none: unset;
 {[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Shadow", brand.id) ]}
