@@ -7,4 +7,10 @@
 
 {[/]}
 {[/]}
+  --shadow-card: 0px 1px 1px 0px rgba(255, 255, 255, 0.10) inset;
+  --shadow-divider: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-menu: 0px 4px 12px -8px rgba(0, 0, 0, 0.25);
+  --shadow-beforeAfter: 0px 4px 96px rgba(17, 36, 84, 0.4);
+  --shadow-form: 0 16px 24px -12px color-mix(in hsl, transparent, #727892 8%), 0 24px 48px 4px color-mix(in hsl, transparent, #727892 6%), 0 12px 64px 8px color-mix(in hsl, transparent, #727892 8%);
+  --shadow-window: 0px 10px 10px rgba(0, 0, 0, 0.04), 0px 20px 25px rgba(0, 0, 0, 0.10);
 }
