@@ -2,7 +2,7 @@
     "blueprints": [
         {
             "invoke": "colors.pr",
-            "write_to": "colors.css"
+            "write_to": "color.css"
         },
         {
             "invoke": "tokens.pr",
@@ -10,7 +10,7 @@
         },
         {
             "invoke": "shadows.pr",
-            "write_to": "shadows.css"
+            "write_to": "shadow.css"
         }
     ]
 }
