@@ -11,6 +11,17 @@ and their value rendered using `rendered-color` blueprint
   --color-border-blue-300: theme(colors.blue.900);
   --bgColor-body: var(--color-base-white);
   --fgColor-heading: var(--color-base-black);
+  --fgColor-gray-50: var(--color-gray-50);
+  --fgColor-gray-100: var(--color-gray-100);
+  --fgColor-gray-200: var(--color-gray-200);
+  --fgColor-gray-300: var(--color-gray-300);
+  --fgColor-gray-400: var(--color-gray-400);
+  --fgColor-gray-500: var(--color-gray-500);
+  --fgColor-gray-600: var(--color-gray-600);
+  --fgColor-gray-700: var(--color-gray-700);
+  --fgColor-gray-800: var(--color-gray-800);
+  --fgColor-gray-900: var(--color-gray-900);
+  --fgColor-gray-950: var(--color-gray-950);
 
 {[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Color", brand.id) ]}
@@ -30,6 +41,17 @@ and their value rendered using `rendered-color` blueprint
   --color-border-blue-300: theme(colors.blue.900);
   --bgColor-body: var(--color-gray-900);
   --fgColor-heading: var(--color-base-white);
+  --fgColor-gray-50: var(--color-gray-950);
+  --fgColor-gray-100: var(--color-gray-900);
+  --fgColor-gray-200: var(--color-gray-800);
+  --fgColor-gray-300: var(--color-gray-700);
+  --fgColor-gray-400: var(--color-gray-600);
+  --fgColor-gray-500: var(--color-gray-500);
+  --fgColor-gray-600: var(--color-gray-400);
+  --fgColor-gray-700: var(--color-gray-300);
+  --fgColor-gray-800: var(--color-gray-200);
+  --fgColor-gray-900: var(--color-gray-100);
+  --fgColor-gray-950: var(--color-gray-50);
 
 {[ let themes = ds.allThemes(brand.id) /]}
 {[ let darkThemeId = getDarkThemeId(themes) /]}

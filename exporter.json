@@ -6,7 +6,7 @@
   "organization": "Ascanio",
   "homepage": "https://ascan.io",
   "source_dir": "src",
-  "version": "1.8.7",
+  "version": "1.8.8",
   "usesBrands": true,
   "usesThemes": true,
   "config": {
