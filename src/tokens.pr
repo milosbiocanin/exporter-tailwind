@@ -10,6 +10,7 @@ and their value rendered using `rendered-color` blueprint
   --color-border-blue-200: theme(colors.blue.800);
   --color-border-blue-300: theme(colors.blue.900);
   --bgColor-body: var(--color-base-white);
+  --fgColor-heading: var(--color-base-black);
 
 {[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Color", brand.id) ]}
@@ -28,6 +29,7 @@ and their value rendered using `rendered-color` blueprint
   --color-border-blue-200: theme(colors.blue.800);
   --color-border-blue-300: theme(colors.blue.900);
   --bgColor-body: var(--color-gray-900);
+  --fgColor-heading: var(--color-base-white);
 
 {[ let themes = ds.allThemes(brand.id) /]}
 {[ let darkThemeId = getDarkThemeId(themes) /]}
